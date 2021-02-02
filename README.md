@@ -26,7 +26,7 @@
 
 ## users table
 
-| Column             | Type                   | Options                 -|
+| Column             | Type                   | Options                  |
 |--------------------|------------------------|--------------------------|
 | nickname           | string                 | null: false              |
 | email              | string                 | null: false unique: true |
