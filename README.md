@@ -26,7 +26,7 @@
 
 ## users table
 
-| Column             | Type                   | Options                 -|
+| Column             | Type                   | Options                  |
 |--------------------|------------------------|--------------------------|
 | nickname           | string                 | null: false              |
 | email              | string                 | null: false unique: true |
@@ -39,53 +39,32 @@
 
 ### Association
 
-* has_many :products
-* has_many :deal_records
+* has_many :softwares
+* has_many :comments
 
-## products table
+## softwares table
 
 | Column             | Type                   | Options                 |
 |--------------------|------------------------|-------------------------|
 | title              | string                 | null: false             |
 | explanation        | text                   | null: false             |
-| category_id        | integer                | null: false             |
-| status_id          | integer                | null: false             |
-| shipping_fee_id    | integer                | null: false             |
-| state_id           | integer                | null: false             |
-| shipping_date_id   | integer                | null: false             |
-| price              | integer                | null: false             |
+| hardware_id        | integer                | null: false             |
 | user               | references             | foreign_key: true       |
 
 ### Association
 
 - belongs_to :user
-- has_one :deal_record
+- has_many :comments
 
-## deal_records table
+## comments table
 
 | Column      | Type       | Options           |
 |-------------|------------|-------------------|
 | user        | references | foreign_key: true |
 | product     | references | foreign_key: true |
+| comment     | text       | foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :product
-- has_one :shipment
-
-## shipments table
-
-| Column             | Type                   | Options                 |
-|--------------------|------------------------|-------------------------|
-| zip_code           | string                 | null: false             |
-| state_id           | integer                | null: false             |
-| city               | string                 | null: false             |
-| street             | string                 | null: false             |
-| apartment          | string                 |                         |
-| telephone          | string                 | null: false             |
-| deal_record        | references             | foreign_key: true       |
-
-### Association
-
-- belongs_to :deal_record
+- belongs_to :software
