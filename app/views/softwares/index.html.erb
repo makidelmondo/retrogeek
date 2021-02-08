@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @softwares.each do |software| %>
+    <div class="content_post" style="background-image: url(<%= software.image %>);">
+      <p><%= software.text %></p>
+      <span class="name">
+        <%= software.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
