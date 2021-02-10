@@ -1,0 +1,43 @@
+class Genre < ActiveHash::Base
+  self.data = [
+    { id: 1, name: '--' },
+    { id: 2, name: 'Switch' },
+    { id: 3, name: 'WiiU' },
+    { id: 4, name: 'Wii' },
+    { id: 5, name: 'GC' },
+    { id: 6, name: 'N64' },
+    { id: 7, name: 'SFC' },
+    { id: 8, name: 'FC' },
+    { id: 9, name: '3DS' },
+    { id: 10, name: 'DS' },
+    { id: 11, name: 'GBA' },
+    { id: 12, name: 'GB' },
+    { id: 13, name: 'PS5' },
+    { id: 14, name: 'PS4' },
+    { id: 15, name: 'PS3' },
+    { id: 16, name: 'PS2' },
+    { id: 17, name: 'PS' },
+    { id: 18, name: 'PSVita' },
+    { id: 19, name: 'PSP' },
+    { id: 20, name: 'XBsX' },
+    { id: 21, name: 'XB1' },
+    { id: 22, name: 'XB360' },
+    { id: 23, name: 'XBOX' },
+    { id: 24, name: 'DC' },
+    { id: 25, name: 'SS' },
+    { id: 26, name: 'MegaCD' },
+    { id: 27, name: 'MD' },
+    { id: 28, name: 'Mark3' },
+    { id: 29, name: 'SG1000' },
+    { id: 30, name: 'PCFX' },
+    { id: 31, name: 'PCECDROM' },
+    { id: 32, name: 'PCE' },
+    { id: 33, name: 'WS' },
+    { id: 34, name: 'NEOGEOCD' },
+    { id: 35, name: 'NEOGEO' },
+    { id: 36, name: '3DO' },
+    { id: 37, name: 'Others' }
+  ]
+  include ActiveHash::Associations
+  has_many :softwares
+end
