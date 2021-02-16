@@ -33,8 +33,6 @@
 | encrypted_password | string                 | null: false              |
 | surname            | string                 | null: false              |
 | name               | string                 | null: false              |
-| kana_surname       | string                 | null: false              |
-| kana_name          | string                 | null: false              |
 | birthday           | date                   | null: false              |
 
 ### Association

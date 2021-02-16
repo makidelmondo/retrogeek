@@ -1,6 +1,7 @@
 class Software < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :hardware
+  has_one_attached :image
 
   validates :title, :string, presence: true
   validates :explanation, :text, presence: true
